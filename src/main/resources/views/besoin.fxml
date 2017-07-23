@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXProgressBar?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXToolbar?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <bottom>
+            <AnchorPane prefHeight="93.0" prefWidth="960.0" style="-fx-background-color: #ffffff; -fx-border-top-color: #000000;" BorderPane.alignment="CENTER">
+               <children>
+                  <ButtonBar layoutX="380.0" layoutY="27.0" prefHeight="40.0" prefWidth="200.0">
+                     <buttons>
+                        <JFXButton fx:id="backBtn" mnemonicParsing="false" prefHeight="29.0" prefWidth="114.0" style="-fx-background-color: #ffffff; -fx-border-color: #000000;" text="Précédent">
+                           <font>
+                              <Font name="Cantarell Bold" size="13.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="nextBtn" defaultButton="true" mnemonicParsing="false" prefHeight="29.0" prefWidth="114.0" style="-fx-background-color: #ffffff; -fx-border-color: #000000;" text="Suivant">
+                           <font>
+                              <Font name="Cantarell Bold" size="13.0" />
+                           </font>
+                        </JFXButton>
+                     </buttons>
+                  </ButtonBar>
+                  <JFXProgressBar layoutX="187.0" layoutY="13.0" prefHeight="0.0" prefWidth="587.0" progress="0.0" />
+               </children>
+            </AnchorPane>
+         </bottom>
+         <top>
+            <AnchorPane prefHeight="49.0" prefWidth="960.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="stepLabel" layoutX="922.0" layoutY="2.0" text="5" AnchorPane.rightAnchor="14.0">
+                     <font>
+                        <Font name="Cantarell Bold" size="36.0" />
+                     </font>
+                  </Label>
+                  <JFXToolbar prefHeight="2.0" prefWidth="886.0" style="-fx-background-color: #000000;" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="50.0" />
+                  <Label fx:id="titleLabel" layoutX="77.0" layoutY="10.0" text="Besoin/opportunité" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="5.0">
+                     <font>
+                        <Font name="Cantarell Regular" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </top>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane layoutX="400.0" layoutY="215.0" prefHeight="89.0" prefWidth="86.0">
+                     <children>
+                        <JFXRadioButton layoutX="1.0" layoutY="9.0" selected="true" text="Oui" AnchorPane.leftAnchor="0.0">
+                           <font>
+                              <Font name="Cantarell Bold" size="18.0" />
+                           </font>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="demandeGroup" />
+                           </toggleGroup>
+                        </JFXRadioButton>
+                        <JFXRadioButton layoutX="14.0" layoutY="53.0" text="Non" toggleGroup="$demandeGroup" AnchorPane.leftAnchor="0.0">
+                           <font>
+                              <Font name="Cantarell Bold" size="18.0" />
+                           </font>
+                        </JFXRadioButton>
+                     </children>
+                  </AnchorPane>
+                  <Label layoutX="241.0" layoutY="68.0" text="Y a-t-il un besoin/opportunité ">
+                     <font>
+                        <Font name="Cantarell Regular" size="36.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="294.0" layoutY="119.0" text="d'électrification rurale ?">
+                     <font>
+                        <Font name="Cantarell Regular" size="36.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</StackPane>

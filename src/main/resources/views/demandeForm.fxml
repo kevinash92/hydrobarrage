@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXProgressBar?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXToolbar?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <bottom>
+         </bottom>
+         <top>
+            <AnchorPane prefHeight="49.0" prefWidth="960.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="stepLabel" layoutX="922.0" layoutY="2.0" text="4" AnchorPane.rightAnchor="14.0">
+                     <font>
+                        <Font name="Cantarell Bold" size="36.0" />
+                     </font>
+                  </Label>
+                  <JFXToolbar prefHeight="2.0" prefWidth="886.0" style="-fx-background-color: #000000;" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="50.0" />
+                  <Label layoutX="20.0" layoutY="6.0" text="Besoins/Opportunité " AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="6.0">
+                     <font>
+                        <Font name="Cantarell Regular" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </top>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="960.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane fx:id="centerPane" layoutX="290.0" layoutY="1.0" prefHeight="373.0" prefWidth="430.0" style="-fx-background-color: #ffffff;">
+                     <children>
+                        <JFXTextField fx:id="nField" labelFloat="true" layoutX="90.0" layoutY="104.0" prefHeight="24.0" prefWidth="217.0" promptText="Échéance du projet" />
+                        <Label fx:id="titleLabel" layoutX="87.0" layoutY="32.0" text="Besoins futurs" underline="true" AnchorPane.leftAnchor="87.0" AnchorPane.topAnchor="32.0">
+                           <font>
+                              <Font name="Cantarell Regular" size="24.0" />
+                           </font>
+                        </Label>
+                        <JFXToolbar layoutY="49.0" prefHeight="0.0" prefWidth="285.0" style="-fx-background-color: #000000;" />
+                        <JFXTextField fx:id="bmField" labelFloat="true" layoutX="89.0" layoutY="152.0" prefHeight="24.0" prefWidth="217.0" promptText="Besoin par ménage" />
+                        <JFXTextField fx:id="poField" labelFloat="true" layoutX="88.0" layoutY="202.0" prefHeight="24.0" prefWidth="218.0" promptText="Chiffre actuel population" />
+                        <JFXTextField fx:id="alphaField" labelFloat="true" layoutX="87.0" layoutY="249.0" prefHeight="24.0" prefWidth="215.0" promptText="Taux croissance" />
+                        <JFXTextField fx:id="mField" labelFloat="true" layoutX="87.0" layoutY="297.0" prefHeight="24.0" prefWidth="217.0" promptText="moyenne/ménage" />
+                        <Label layoutX="52.0" layoutY="108.0" text="n :">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="311.0" layoutY="108.0" text="(années)" />
+                        <Label layoutX="41.0" layoutY="156.0" text="Bm:">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="42.0" layoutY="206.0" text="Po :">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="48.0" layoutY="253.0" text="α :">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="43.0" layoutY="301.0" text="m :">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children></AnchorPane>
+         </center>
+         <bottom>
+            <AnchorPane prefHeight="93.0" prefWidth="960.0" style="-fx-background-color: #ffffff; -fx-border-top-color: #000000;" BorderPane.alignment="CENTER">
+               <children>
+                  <ButtonBar layoutX="380.0" layoutY="27.0" prefHeight="40.0" prefWidth="200.0">
+                     <buttons>
+                        <JFXButton fx:id="backBtn" mnemonicParsing="false" prefHeight="29.0" prefWidth="114.0" style="-fx-background-color: #ffffff; -fx-border-color: #000000;" text="Précédent">
+                           <font>
+                              <Font name="Cantarell Bold" size="13.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="nextBtn" defaultButton="true" mnemonicParsing="false" prefHeight="29.0" prefWidth="114.0" style="-fx-background-color: #ffffff; -fx-border-color: #000000;" text="Suivant">
+                           <font>
+                              <Font name="Cantarell Bold" size="13.0" />
+                           </font>
+                        </JFXButton>
+                     </buttons>
+                  </ButtonBar>
+                  <JFXProgressBar layoutX="187.0" layoutY="13.0" prefHeight="0.0" prefWidth="587.0" progress="0.0" />
+               </children>
+            </AnchorPane>
+         </bottom>
+      </BorderPane>
+   </children>
+</StackPane>
